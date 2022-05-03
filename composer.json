@@ -1,0 +1,14 @@
+{
+  "name": "cehirim1/sdev328/practising Templating",
+  "authors": [
+    {
+      "name": "Chisom Ehirim",
+      "email": "ehirim.chisom@student.greenriver.edu"
+    }
+  ],
+
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+
+}
