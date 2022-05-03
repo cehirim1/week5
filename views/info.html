@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ @title }}</title>
 </head>
 <body>
-<h1>I said Hello!</h1>
+<h1>{{ @title }}</h1>
+<p>{{ @username }} is logged in and her favorite color is {{ @color }}.</p>
+<p>Circumference is {{ round(2 * pi() * @radius, 3) }}</p>
+
+<p>List of Fruits</p>
+<ul>
+    <repeat group="{{ @fruits }}" value="{{ @fruit}}">
+        <li>
+            {{ trim(@fruit)}}
+        </li>
+    </repeat>
+</ul>
+
+<p>List of Vegetables</p>
+<ul>
+    <repeat group="{{ @vegetables }}" value="{{ @vegetables}}">
+        <li>
+            {{ trim(@vegetables)}}
+        </li>
+    </repeat>
+</ul>
+
+<p>List of Addresses</p>
+<ol>
+    <repeat group="{{ @addresses }}" key="{{ @type }}" value="{{ @address }}">
+        <li>
+            {{ trim(@type)}} - {{ @address }}
+        </li>
+    </repeat>
+</ol>
+
+
+<p>My Favorite Desserts</p>
+
+<repeat group="{{ @desserts }}" key="{{ @type }}" value="{{ @dessert }}">
+    <input type="checkbox">
+    {{ trim(@type)}} - {{ @dessert }}<br>
+    </input>
+</repeat>
+<div style="float: right">
+<img src="images/mousse.png" alt="strawberry-chocolate mousse" width="500" height="400">
+</div>
 </body>
 </html>
